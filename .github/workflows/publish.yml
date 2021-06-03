@@ -16,7 +16,6 @@ jobs:
                   node-version: 14
                   registry-url: https://npm.pkg.github.com
             - run: yarn install
-            - run: yarn bootstrap
             - run: yarn build
             - run: npx lerna bootstrap
             - run: npx lerna publish
