@@ -21,6 +21,6 @@ jobs:
                   git config --global user.email 'ankit.bathla@zopsmart.com'
             - run: npm install
             - run: npx lerna bootstrap
-            - run: npx lerna publish patch --yes
+            - run: npx lerna publish patch --yes --no-verify-access=false
               env:
                   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
