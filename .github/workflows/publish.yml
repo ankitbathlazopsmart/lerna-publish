@@ -17,6 +17,6 @@ jobs:
                   registry-url: https://npm.pkg.github.com
             - run: npm install
             - run: npx lerna bootstrap
-            - run: npx lerna publish
+            - run: npx lerna publish --yes
               env:
                   NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
