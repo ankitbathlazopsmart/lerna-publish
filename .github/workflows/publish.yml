@@ -15,6 +15,9 @@ jobs:
               with:
                   node-version: 14
                   registry-url: https://npm.pkg.github.com
+            - run: |
+                  git config --global user.name '@ankitbathlazopsmart'
+                  git config --global user.email 'ankit.bathla@zopsmart.com'
             - run: npm install
             - run: npx lerna bootstrap
             - run: npx lerna publish patch --yes
